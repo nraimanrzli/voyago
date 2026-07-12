@@ -2,7 +2,7 @@
 
 Follow these steps to set up **Voyago** on your local machine.
 
-### Prerequisites
+### Requirement
 
 - [XAMPP](https://www.apachefriends.org/) (or any stack with Apache, PHP 8.0+, and MySQL/MariaDB)
 - A web browser
@@ -54,6 +54,6 @@ Follow these steps to set up **Voyago** on your local machine.
 
 ### Notes
 
-- Uploaded files (homestay images, documents, receipts) are stored in the `/uploads` we seperate it into google drive because the file is too large .
+- Uploaded files (homestay images, documents, receipts) are stored in the `/uploads`, we seperate it into google drive because the file is too large .
 - Email receipts are generated as `.txt` files in the project root for testing/demo purposes.
 - Database schema updates are handled automatically on connection via migration checks in `toyyibpay_config.php`.
