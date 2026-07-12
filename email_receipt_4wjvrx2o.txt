@@ -1,0 +1,18 @@
+==================================================
+             VOYAGO ENTERPRISE RECEIPT            
+==================================================
+Hi Host Manager,
+
+Payment of RM29.00 for annual listing fee was SUCCESSFUL.
+
+Transaction reference metadata:
+--------------------------------------------------
+Bill Code       : 4wjvrx2o
+Homestay ID     : #19
+Property Name   : Pantai Batu Buruk Inn (Per Room
+Amount Paid     : RM 29.00
+Payment Channel : FPX Online Banking
+Moderation Stage: Pending Approval (Awaiting Admin validation review)
+--------------------------------------------------
+System confirmation log timestamp: 2026-07-11 14:11:54
+==================================================

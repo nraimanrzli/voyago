@@ -1,0 +1,118 @@
+/* ==========================================================================
+   VOYAGO ADMIN COMMISSION ISOLATED STYLESHEET
+   ========================================================================== */
+
+.commission-cut {
+  font-weight: 700;
+  color: #198754; 
+}
+
+.host-payout {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.filter-grid input {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-grid input:focus {
+  border-color: var(--primary-color);
+}
+
+/* --- Money Status Badges --- */
+.money-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.status-paid {
+  background-color: #def7ec;
+  color: #03543f;
+}
+
+.status-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+/* --- Action Buttons Design --- */
+.action-btn-group {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.action-btn-node {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-pdf {
+  background-color: #f3f4f6;
+  color: var(--text-dark);
+  border: 1px solid #e5e7eb;
+}
+
+.btn-pdf:hover {
+  background-color: #e5e7eb;
+}
+
+.btn-toyyib {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-toyyib:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.action-btn-node.disabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+/* --- COMMISSION DARK THEME OVERRIDES --- */
+.commission-cut {
+  color: #10b981 !important;
+}
+
+.filter-grid input {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.btn-pdf {
+  background-color: #f3f4f6 !important;
+  color: #1e293b !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.btn-pdf:hover {
+  background-color: #e5e7eb !important;
+}

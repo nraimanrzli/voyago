@@ -1,0 +1,476 @@
+:root {
+  --primary-teal: #06402B;
+  --accent-gold: #d4af37;
+  --teal-hover: #0a5238;
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --text-white: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(rgba(4, 34, 23, 0.65), rgba(4, 34, 23, 0.75)), url('../images/indexbg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  color: var(--text-white);
+}
+
+/* Base Wrapper Grid */
+.main-wrapper {
+  width: 100%;
+  max-width: 1300px;
+  min-height: 85vh;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  z-index: 5;
+}
+
+/* Section Styling */
+.left-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem 0;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: var(--glass-shadow);
+  display: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Typography elements */
+.brand-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+
+.brand-logo span {
+  color: var(--accent-gold);
+}
+
+.welcome-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Input Fields & Groups */
+.input-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-white);
+}
+
+.input-group label i {
+  margin-right: 4px;
+  color: var(--accent-gold);
+}
+
+.input-group input, .select-wrapper select {
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  outline: none;
+  color: var(--text-white);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus, .select-wrapper select:focus {
+  border-color: var(--accent-gold);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Custom Dropdown select wrapper */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select option {
+  background: #042217;
+  color: var(--text-white);
+}
+
+/* Password Toggle Icon */
+.password-wrapper .toggle-password {
+  position: absolute;
+  right: 15px;
+  bottom: 12px;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.password-wrapper .toggle-password:hover {
+  color: var(--accent-gold);
+}
+
+/* Password Strength Meter */
+.strength-meter {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 6px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0%;
+  transition: all 0.4s ease;
+}
+
+/* Checkbox & Forgot Pass Styling */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.remember-me input {
+  margin-right: 8px;
+  accent-color: var(--accent-gold);
+  width: 16px;
+  height: 16px;
+}
+
+.forgot-pass-link, .card-footer a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.forgot-pass-link:hover, .card-footer a:hover {
+  color: var(--text-white);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.card-footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Premium Gradient Button & Spinner */
+.btn-gradient {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--primary-teal), var(--teal-hover));
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  color: var(--text-white);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(6, 64, 43, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+  border-color: var(--accent-gold);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--accent-gold);
+  animation: spin 0.8s linear infinite;
+  position: absolute;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Marketing Section Styling (Right Side) */
+.marketing-content {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 3rem;
+}
+
+.headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.headline span {
+  color: var(--accent-gold);
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  color: var(--text-white);
+  font-size: 1.6rem;
+  background: rgba(255, 255, 255, 0.08);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icons a:hover {
+  background: var(--accent-gold);
+  color: var(--primary-teal);
+  transform: translateY(-4px) rotate(8deg);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Small Advertisement Glass Card */
+.ads-card-glass {
+  background: rgba(6, 64, 43, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  max-width: 480px;
+  margin-left: auto;
+  box-shadow: var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ads-card-glass:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+.ads-badge {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: var(--accent-gold);
+  color: #042217;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.ads-card-glass h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-white);
+}
+
+.ads-card-glass p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.btn-ads-join {
+  background: transparent;
+  border: none;
+  color: var(--accent-gold);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-ads-join i {
+  transition: transform 0.3s ease;
+}
+
+.btn-ads-join:hover i {
+  transform: translateX(6px);
+}
+
+/* Floating Nature Ambient Particles */
+.leaf-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.leaf {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 0 100px;
+  animation: airborne 12s linear infinite;
+}
+
+.leaf:nth-child(1) { left: 10%; animation-delay: 0s; width: 12px; height: 12px; }
+.leaf:nth-child(2) { left: 35%; animation-delay: 3s; width: 18px; height: 18px; }
+.leaf:nth-child(3) { left: 65%; animation-delay: 6s; }
+.leaf:nth-child(4) { left: 85%; animation-delay: 1s; width: 10px; height: 10px; }
+
+@keyframes airborne {
+  0% { transform: translateY(-10%) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { transform: translateY(110%) translateX(100px) rotate(360deg); opacity: 0; }
+}
+
+/* Responsive Breakdown Media Queries */
+@media (max-width: 1024px) {
+  .main-wrapper {
+    grid-template-columns: 1fr;
+    margin: 1.5rem;
+  }
+  .right-section {
+    padding: 2rem 0 0 0;
+    gap: 2rem;
+  }
+  .marketing-content {
+    padding-left: 0;
+    text-align: center;
+  }
+  .marketing-content .subtitle {
+    margin-inline: auto;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .ads-card-glass {
+    margin-inline: auto;
+    width: 100%;
+  }
+  .glass-card {
+    margin-inline: auto;
+  }
+  .headline {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .glass-card {
+    padding: 2rem 1.5rem;
+  }
+  .headline {
+    font-size: 2.5rem;
+  }
+}

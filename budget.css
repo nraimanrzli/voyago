@@ -1,0 +1,438 @@
+/* css/budget.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    background: url('../images/budgetbg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.budget-wrapper-page {
+    display: flex;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.55); /* Gelapkan lagi background sikit supaya kotak nampak timbul */
+}
+
+.main-budget-pane {
+    flex: 1;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Header Styles */
+.budget-top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.budget-top-header h2 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    color: #f4cb66;
+}
+
+.budget-top-header p {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+}
+
+.header-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trip-switcher-dropdown {
+    background: rgba(0, 0, 0, 0.6);
+    color: #f4cb66;
+    border: 1px solid #f4cb66;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-back-dashboard {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: 0.2s;
+}
+.btn-back-dashboard:hover { background: rgba(255,255,255,0.3); }
+
+.btn-finish-trip {
+    background: #e74c3c;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-finish-trip:hover { background: #c0392b; }
+
+/* AI Suggestion Box */
+.ai-suggestion-box {
+    background: rgba(46, 204, 113, 0.35);
+    border: 1px solid #2ecc71;
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    margin-bottom: 25px;
+}
+.suggestion-icon-badge {
+    background: rgba(255,255,255,0.2);
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+.ai-suggestion-box h4 { margin: 0 0 2px 0; color: #fff; }
+.ai-suggestion-box p { margin: 0; font-size: 12px; color: rgba(255,255,255,0.9); }
+
+/* Grid Dashboard Presentation Layer */
+.budget-grid-dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.dashboard-column-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* KOTAK PUTIH BLUR PREMIUM (GLASSMORPHISM REINFORCED) */
+.glass-metric-card {
+    background: rgba(255, 255, 255, 0.18) !important; /* Bertukar kepada warna putih pudar lutsinar */
+    border: 1px solid rgba(255, 255, 255, 0.3) !important; /* Garisan border putih lebih jelas */
+    backdrop-filter: blur(20px) saturate(160%) !important; /* Efek kabur frosted glass yang kuat */
+    -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #ffffff;
+}
+
+.glass-metric-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Monitor Status Cards */
+.monitor-card-safe {
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.25) 0%, rgba(255,255,255,0.15) 100%) !important;
+    border: 1px solid rgba(46, 204, 113, 0.5) !important;
+    backdrop-filter: blur(20px) !important;
+    padding: 25px;
+    border-radius: 16px;
+}
+.overlimit-danger {
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.4) 0%, rgba(0,0,0,0.6) 100%) !important;
+    border: 1px solid #e74c3c !important;
+}
+
+/* Small Component Sub-Styles */
+.step-badge {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: #f4cb66;
+    color: #000000;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-shadow: none;
+}
+
+.card-description-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.inline-budget-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-currency-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.currency-label-prefix {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.dark-input-field {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px 10px 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.btn-save-budget {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+    transition: 0.2s;
+}
+.btn-save-budget:hover { background: #27ae60; }
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.btn-card-action-add {
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-card-action-add:hover { background: rgba(255,255,255,0.4); }
+
+.scrollable-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 190px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Row Styling inside Glasses */
+.document-item-row, .tripmate-item-row, .expense-ledger-row, .history-item-row {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.document-item-row { border-left: 4px solid #3498db; }
+.expense-ledger-row { border-left: 4px solid #e67e22; }
+
+.item-title-text { font-size: 13px; font-weight: bold; color: #ffffff; }
+.item-subtitle-text { color: rgba(255, 255, 255, 0.7); font-size: 11px; }
+.empty-state-text { font-size: 12px; color: rgba(255, 255, 255, 0.7); font-style: italic; margin: 0; text-align: center; }
+
+.btn-view-document {
+    background: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.avatar-fallback-circle {
+    width: 32px;
+    height: 32px;
+    background: #f4cb66;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.debt-alert-text { display: block; color: #ff6b6b; font-weight: bold; font-size: 11px; margin-top: 2px; }
+
+.btn-settle-debt {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Financial Monitor Components */
+.financial-counters-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.counter-box {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.counter-box-title { font-size: 11px; color: rgba(255, 255, 255, 0.8); text-transform: uppercase; font-weight: 500; }
+.danger-warning-alert-bar {
+    background: rgba(231, 76, 60, 0.3);
+    border: 1px solid #e74c3c;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-add-cost-orange {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.expense-amount-tag { color: #ff4d4d; font-weight: bold; font-size: 14px; }
+
+/* Memory Hall Elements */
+.btn-log-photo-teal {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.memory-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+.memory-photo-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+}
+.memory-photo-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+.memory-photo-card p {
+    margin: 8px 0 0 0;
+    font-size: 12px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
+}
+
+/* Modals System Style */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-glass-content {
+    background: rgba(30, 30, 30, 0.85);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(25px);
+    padding: 30px;
+    border-radius: 16px;
+    width: 450px;
+    color: white;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 24px; cursor: pointer;
+    color: rgba(255,255,255,0.7);
+}
+.close-btn:hover { color: #fff; }
+
+.form-group-field { margin-bottom: 15px; }
+.form-group-field label { display: block; font-size: 12px; font-weight: bold; margin-bottom: 5px; color: #f4cb66; }
+
+.modal-dark-input {
+    width: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 6px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.modal-submit-btn {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+}

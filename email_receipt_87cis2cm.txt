@@ -1,0 +1,18 @@
+==================================================
+             VOYAGO ENTERPRISE RECEIPT            
+==================================================
+Hi Host Manager,
+
+Payment of RM29.00 for annual listing fee was SUCCESSFUL.
+
+Transaction reference metadata:
+--------------------------------------------------
+Bill Code       : 87cis2cm
+Homestay ID     : #16
+Property Name   : G Residence, Menara B, Jalan Mutiara 7, Johor Bahru, Johor, Malaysia
+Amount Paid     : RM 29.00
+Payment Channel : FPX Online Banking
+Moderation Stage: Pending Approval (Awaiting Admin validation review)
+--------------------------------------------------
+System confirmation log timestamp: 2026-07-11 13:39:43
+==================================================

@@ -1,0 +1,18 @@
+==================================================
+             VOYAGO ENTERPRISE RECEIPT            
+==================================================
+Hi Host Manager,
+
+Payment of RM29.00 for annual listing fee was SUCCESSFUL.
+
+Transaction reference metadata:
+--------------------------------------------------
+Bill Code       : vaoazrch
+Homestay ID     : #13
+Property Name   : Sri Chempaka Homestay
+Amount Paid     : RM 29.00
+Payment Channel : FPX Online Banking
+Moderation Stage: Pending Approval (Awaiting Admin validation review)
+--------------------------------------------------
+System confirmation log timestamp: 2026-07-11 13:21:23
+==================================================

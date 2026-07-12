@@ -1,0 +1,18 @@
+==================================================
+             VOYAGO ENTERPRISE RECEIPT            
+==================================================
+Hi Host Manager,
+
+Payment of RM29.00 for annual listing fee was SUCCESSFUL.
+
+Transaction reference metadata:
+--------------------------------------------------
+Bill Code       : 49ghss0y
+Homestay ID     : #24
+Property Name   : Seaview Homestay Batu Ferringhi (Whole House)
+Amount Paid     : RM 29.00
+Payment Channel : FPX Online Banking
+Moderation Stage: Pending Approval (Awaiting Admin validation review)
+--------------------------------------------------
+System confirmation log timestamp: 2026-07-11 14:51:51
+==================================================

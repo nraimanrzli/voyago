@@ -1,0 +1,19 @@
+==================================================
+             VOYAGO ENTERPRISE RECEIPT            
+==================================================
+Hi deena,
+
+Pembayaran RM29.00 bagi pengaktifan listing telah BERJAYA.
+
+Butiran Transaksi:
+--------------------------------------------------
+Bill Code       : 8n6grf1v
+Homestay ID     : #11
+Nama Homestay   : Ipoh Homestay by IPOH TREATS PLT
+Jumlah Dibayar  : RM 29.00
+Kaedah Bayaran  : FPX Online Banking
+Status Kelulusan: Pending Approval (Menunggu Kelulusan Admin)
+--------------------------------------------------
+Terima kasih kerana memilih Voyago!
+Tarikh Log Sistem: 2026-07-02 03:27:11
+==================================================

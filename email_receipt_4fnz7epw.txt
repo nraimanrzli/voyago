@@ -1,0 +1,19 @@
+==================================================
+             VOYAGO ENTERPRISE RECEIPT            
+==================================================
+Hi Pengusaha Voyago,
+
+Pembayaran RM29.00 bagi pengaktifan listing telah BERJAYA.
+
+Butiran Transaksi:
+--------------------------------------------------
+Bill Code       : 4fnz7epw
+Homestay ID     : #9
+Nama Homestay   : Homestay Seri Tanjung
+Jumlah Dibayar  : RM 29.00
+Kaedah Bayaran  : FPX Online Banking
+Status Kelulusan: Pending Approval (Menunggu Kelulusan Admin)
+--------------------------------------------------
+Terima kasih kerana memilih Voyago!
+Tarikh Log Sistem: 2026-06-29 16:36:24
+==================================================

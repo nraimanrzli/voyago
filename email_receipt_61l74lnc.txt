@@ -1,0 +1,19 @@
+==================================================
+             VOYAGO ENTERPRISE RECEIPT            
+==================================================
+Hi Faiz,
+
+Pembayaran RM29.00 bagi pengaktifan listing telah BERJAYA.
+
+Butiran Transaksi:
+--------------------------------------------------
+Bill Code       : 61l74lnc
+Homestay ID     : #12
+Nama Homestay   : Similaju Homestay
+Jumlah Dibayar  : RM 29.00
+Kaedah Bayaran  : FPX Online Banking
+Status Kelulusan: Pending Approval (Menunggu Kelulusan Admin)
+--------------------------------------------------
+Terima kasih kerana memilih Voyago!
+Tarikh Log Sistem: 2026-07-01 05:57:52
+==================================================
